@@ -1,7 +1,7 @@
 # OpenGL
 Android daily app Challenge Day11(OpenGL) : Language Kotlin
 
-Application the following functionalities
+Application has the following functionalities:
 1] Set and Change drawable color gradient programmatically
 2] Set and add saturation programmatically
 3] Set Progress pie curve with respect to radius angle programmatically
