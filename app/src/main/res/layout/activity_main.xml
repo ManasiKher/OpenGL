@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="dayeleven.com.lrm.kotlinday11.MainActivity">
+<android.support.constraint.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gradients"
+        android:padding="10dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:id="@+id/tv_gradient"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.AppCompatSeekBar
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:paddingEnd="30dp"
+        android:paddingLeft="30dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_gradient"
+        android:id="@+id/seek_gradient"
+        android:paddingRight="30dp"
+        android:paddingStart="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+    <View
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:text="@string/gradients"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:id="@+id/view_gradient"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seek_gradient" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/saturation"
+        android:padding="10dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:id="@+id/tv_saturation"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_gradient" />
+    <android.support.v7.widget.AppCompatSeekBar
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:paddingEnd="30dp"
+        android:paddingLeft="30dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_saturation"
+        android:id="@+id/seek_saturation"
+        android:paddingRight="30dp"
+        android:paddingStart="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_height="150dp"
+        android:text="@string/gradients"
+        android:padding="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:id="@+id/view_saturation"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seek_saturation" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/progress_pie"
+        android:padding="10dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:id="@+id/tv_progresspie"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view_saturation" />
+    <android.support.v7.widget.AppCompatSeekBar
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:paddingEnd="30dp"
+        android:paddingLeft="30dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_progresspie"
+        android:id="@+id/seek_progress_pie"
+        android:paddingRight="30dp"
+        android:paddingStart="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:text="@string/gradients"
+        android:padding="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:id="@+id/view_progress_pie"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/seek_progress_pie" />
+</android.support.constraint.ConstraintLayout>
+</ScrollView>
