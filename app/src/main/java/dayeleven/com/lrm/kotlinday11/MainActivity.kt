@@ -18,12 +18,10 @@ import android.graphics.BitmapFactory
 import android.opengl.ETC1.getHeight
 import android.opengl.ETC1.getWidth
 import android.graphics.Color.LTGRAY
-
-
-
-
-
-
+import android.view.Gravity
+import android.view.ViewGroup
+import android.widget.LinearLayout
+import com.filippudak.ProgressPieView.ProgressPieView
 
 
 class MainActivity : AppCompatActivity() {
@@ -31,6 +29,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var gradientSet:GradientSet
     private lateinit var bitmap: Bitmap
     private lateinit var bitMapOrg:Drawable
+    private val SIZE = 96
+    private val MARGIN = 8
 
     private var colorMatrix: ColorMatrix? = null
     private var cmFilter: ColorMatrixColorFilter? = null
@@ -52,22 +52,17 @@ class MainActivity : AppCompatActivity() {
         //view_saturation.setBackgroundResource(R.drawable.cartoon_image)
         bitMapOrg= resources.getDrawable(R.drawable.cartoon_image) as Drawable
         checkForSaturationProgress()
-        checkForProgressPie()
+        drawacircleWithCanvas()
 
     }
-
-
-
-
-
 
     fun createGradient()
     {
         val sf = object : ShapeDrawable.ShaderFactory() {
             override fun resize(width: Int, height: Int): Shader {
-                return LinearGradient(0.2f, 0.2f, width.toFloat(), height.toFloat(),
+                return LinearGradient(0f, 0f, width.toFloat(), height.toFloat(),
                         intArrayOf(Color.RED, Color.GREEN, Color.BLUE, Color.YELLOW),
-                        floatArrayOf(0.2f, 0.5f, .55f, 2f), Shader.TileMode.MIRROR)
+                        floatArrayOf(0.2f, 0.5f, .56f, 2f), Shader.TileMode.MIRROR)
             }
         }
 
@@ -94,7 +89,7 @@ class MainActivity : AppCompatActivity() {
         //Initialize the 'imgBitmap' by decoding the 'exampleimage.png' file
         imgBitmap = BitmapFactory.decodeResource(resources, R.drawable.cartoon_image)
         //Create a new mutable Bitmap, with the same width and height as the 'imgBitmap'
-        canvasBitmap = Bitmap.createBitmap(300, 170, Bitmap.Config.ARGB_8888)
+        canvasBitmap = Bitmap.createBitmap(400, 180, Bitmap.Config.RGB_565)
         //Initialize the canvas assigning the mutable Bitmap to it
         cv = Canvas(canvasBitmap)
 
@@ -123,9 +118,6 @@ class MainActivity : AppCompatActivity() {
     fun checkForSaturationProgress()
     {
         seek_gradient.max = 200
-        var progress:Float
-        progress = seek_saturation.progress.toFloat()
-
         seek_saturation.setOnSeekBarChangeListener(object:SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
                 //createGradient()
@@ -150,7 +142,7 @@ class MainActivity : AppCompatActivity() {
         val hsv = FloatArray(3)
         var color = Color.rgb(value/10*Color.RED,value/5*Color.GREEN,value/10*Color.BLUE)
         Color.colorToHSV(color, hsv)
-        hsv[2] *= 0.7f//.8f // value component
+        hsv[2] *= .8f // value component
         color = Color.HSVToColor(hsv)
         view_gradient.setBackgroundColor(color)
 
@@ -172,19 +164,36 @@ class MainActivity : AppCompatActivity() {
         view_saturation.setImageBitmap(canvasBitmap)
     }
 
-    fun checkForProgressPie()
+
+    fun drawacircleWithCanvas()
     {
-        seek_gradient.max = 200
-        var progress:Float
-        progress = seek_saturation.progress.toFloat()
+
+        view_progress_pie.setProgress(20)
+
+
+        // Default version
+        view_progress_pie.setOnProgressListener(object : ProgressPieView.OnProgressListener {
+            override fun onProgressChanged(progress: Int, max: Int) {
+                if (!view_progress_pie.isTextShowing()) {
+                    //view_progress_pie.setShowText(true)
+                    view_progress_pie.setShowImage(false)
+                }
+            }
+
+            override fun onProgressCompleted() {
+                if (!view_progress_pie.isImageShowing()) {
+                    view_progress_pie.setShowImage(true)
+                }
+                view_progress_pie.setShowText(false)
+               // view_progress_pie.setImageResource(R.drawable.notification_bg)
+            }
+        })
 
         seek_progress_pie.setOnSeekBarChangeListener(object:SeekBar.OnSeekBarChangeListener{
             override fun onProgressChanged(p0: SeekBar?, p1: Int, p2: Boolean) {
-                //createGradient()
-                Log.d("Values ","$p1")
-                //createColorShades(p1)
 
-               drawacircleWithCanvas(p1)
+                view_progress_pie.setProgress(p1)
+                //view_progress_pie.setText(p1.toString() + "%")
             }
 
             override fun onStartTrackingTouch(p0: SeekBar?) {
@@ -194,45 +203,7 @@ class MainActivity : AppCompatActivity() {
             override fun onStopTrackingTouch(p0: SeekBar?) {
                 //TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
             }
-        } )
-    }
+        })
 
-
-    fun drawacircleWithCanvas(progress: Int)
-    {
-        val bitmap = Bitmap.createBitmap(
-                500, // Width
-                300, // Height
-                Bitmap.Config.ARGB_8888 // Config
-        )
-
-        // Initialize a new Canvas instance
-        val canvas = Canvas(bitmap)
-
-        // Draw a solid color to the canvas background
-        //canvas.drawColor(Color.LTGRAY)
-
-        // Initialize a new Paint instance to draw the Circle
-        val paint = Paint()
-        paint.style = Paint.Style.FILL
-        paint.color = Color.BLACK
-        paint.isAntiAlias = true
-
-        // Calculate the available radius of canvas
-        val radius = Math.min(canvas.width, canvas.height / 2)//canvas.width
-
-        // Set a pixels value to padding around the circle
-        val padding = 5
-
-        // Finally, draw the circle on the canvas
-        canvas.drawCircle(
-                (canvas.width / 2).toFloat(), // cx
-                (canvas.height / 2).toFloat(), // cy
-                (radius - padding).toFloat(), // Radius
-                paint // Paint
-        )
-
-        // Display the newly created bitmap on app interface
-        view_progress_pie.setImageBitmap(bitmap)
     }
 }
