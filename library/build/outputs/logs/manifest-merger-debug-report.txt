@@ -1,0 +1,39 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml:1:1-9:12
+INJECTED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml:1:1-9:12
+INJECTED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml:1:1-9:12
+INJECTED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml:1:1-9:12
+INJECTED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml:1:1-9:12
+INJECTED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml:1:1-9:12
+INJECTED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml:1:1-9:12
+	package
+		ADDED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml:2:5-45
+		INJECTED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml
+		INJECTED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml:4:5-30
+		INJECTED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml
+		INJECTED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml:1:11-69
+	android:versionCode
+		ADDED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml:3:5-28
+		INJECTED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml
+		INJECTED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml
+uses-sdk
+ADDED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml:6:5-72
+INJECTED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml:6:5-72
+INJECTED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml:6:5-72
+INJECTED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml:6:5-72
+INJECTED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml:6:5-72
+	android:targetSdkVersion
+		ADDED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml:6:41-70
+		INJECTED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml
+		INJECTED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml:6:15-40
+		INJECTED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml
+		INJECTED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml
+application
+ADDED from /home/manasi/LRM Apps/KotlinDemos/KotlinDay11/library/src/main/AndroidManifest.xml:8:5-20

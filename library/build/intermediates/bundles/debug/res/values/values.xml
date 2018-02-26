@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="default_background_color">@android:color/transparent</color>
+    <color name="default_progress_color">#33b5e5</color>
+    <color name="default_stroke_color">#33b5e5</color>
+    <color name="default_text_color">#333333</color>
+    <declare-styleable name="ProgressPieView"><attr name="android:text"/><attr name="android:textSize"/><attr name="android:textColor"/><attr format="integer" name="ppvProgress"/><attr format="integer" name="ppvMax"/><attr format="integer" name="ppvStartAngle"/><attr format="boolean" name="ppvInverted"/><attr format="boolean" name="ppvCounterclockwise"/><attr format="dimension" name="ppvStrokeWidth"/><attr format="reference|color" name="ppvBackgroundColor"/><attr format="reference|color" name="ppvProgressColor"/><attr format="reference|color" name="ppvStrokeColor"/><attr format="boolean" name="ppvShowStroke"/><attr format="boolean" name="ppvShowText"/><attr format="string" name="ppvTypeface"/><attr format="reference" name="ppvImage"/><attr format="enum" name="ppvProgressFillType">
+            <enum name="radial" value="0"/>
+            <enum name="center" value="1"/>
+        </attr></declare-styleable>
+</resources>
